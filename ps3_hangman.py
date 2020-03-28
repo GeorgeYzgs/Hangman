@@ -1,6 +1,4 @@
 # Hangman game
-#
-
 
 import random
 
@@ -60,7 +58,6 @@ def getGuessedWord(secretWord, lettersGuessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secretWord have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
     ans = ''
     for letter in list(secretWord):
         if letter not in lettersGuessed:
@@ -76,7 +73,6 @@ def getAvailableLetters(lettersGuessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE...
     letters = ''
     letterList = list('abcdefghijklmnopqrstuvwxyz')
     for letter in lettersGuessed:
@@ -129,10 +125,6 @@ def hangman(secretWord):
     elif isWordGuessed(secretWord, lettersGuessed):
         print("Congratulations, you won!")
 
-
-# When you've completed your hangman function, uncomment these two lines
-# and run this file to test! (hint: you might want to pick your own
-# secretWord while you're testing)
 
 secretWord = chooseWord(wordlist).lower()
 hangman(secretWord)
